@@ -1,5 +1,4 @@
 import { Causes } from "./causes";
-import { User } from "./user";
 
 export type Addiction = {
   id: string;
