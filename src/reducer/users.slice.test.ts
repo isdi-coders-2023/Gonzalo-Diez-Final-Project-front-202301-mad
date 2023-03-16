@@ -1,6 +1,6 @@
 import { PayloadAction } from "@reduxjs/toolkit";
 import { User } from "../models/user";
-import { userReducer, State, initialState } from "./users.slice";
+import { userReducer, State } from "./users.slice";
 
 const userMock = {
   id: "1",
@@ -8,7 +8,10 @@ const userMock = {
   password: "test",
 };
 
-const mockInitialState = initialState;
+const mockInitialState: State = {
+  userLogged: {} as User,
+  users: [],
+};
 
 describe("Given the Users slice reducer", () => {
   describe("When we use the register method", () => {
