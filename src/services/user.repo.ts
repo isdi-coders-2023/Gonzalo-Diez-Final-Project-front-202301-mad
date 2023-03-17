@@ -1,13 +1,13 @@
-import { User } from "../models/user";
+import { UserToServe, userResults } from "../models/user";
 import { URepo } from "./user.repo.interface";
 
-export class UserRepo implements URepo<User> {
+export class UserRepo implements URepo<userResults> {
   url: string;
   constructor() {
     this.url = "http://localhost:4500";
   }
 
-  async create(info: Partial<User>, path: string): Promise<User> {
+  async create(info: Partial<UserToServe>, path: string): Promise<userResults> {
     const url = this.url + "/" + path;
 
     const resp = await fetch(url, {
@@ -20,13 +20,15 @@ export class UserRepo implements URepo<User> {
     if (!resp.ok) throw new Error(`Error: ${resp.status} ${resp.statusText}`);
 
     const data = await resp.json();
+
     return data;
   }
+
   async update(
-    info: Partial<User>,
+    info: Partial<UserToServe>,
     path: string,
     token: string
-  ): Promise<User> {
+  ): Promise<userResults> {
     const url = this.url + "/" + path;
 
     const resp = await fetch(url, {

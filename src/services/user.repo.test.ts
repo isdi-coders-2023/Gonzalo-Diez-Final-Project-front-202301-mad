@@ -1,3 +1,4 @@
+import { User } from "../models/user";
 import { UserRepo } from "./user.repo";
 
 describe("Given the UsersRepo", () => {
