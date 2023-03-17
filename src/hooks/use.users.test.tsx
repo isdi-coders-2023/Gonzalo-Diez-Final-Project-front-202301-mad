@@ -7,16 +7,16 @@ import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Provider } from "react-redux";
 import { store } from "../store/store";
-import { register } from "../reducer/users.slice";
 
 describe("Given our users custom hook", () => {
   let payloadMock: User;
   let repoMock: UserRepo;
+  const mockPass = "Test!";
 
   beforeEach(async () => {
     payloadMock = {
       email: "ThisIsATest@test.com",
-      password: "Test!",
+      password: mockPass,
     } as unknown as User;
 
     repoMock = {
