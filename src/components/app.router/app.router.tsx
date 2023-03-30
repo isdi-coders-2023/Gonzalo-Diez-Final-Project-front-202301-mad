@@ -26,15 +26,15 @@ export function AppRouter({ routerOptions }: AppRouterTypes) {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path={"/"} element={<Access></Access>}></Route>
-        <Route path={RouterPaths[1].path} element={<Home></Home>}></Route>
-        <Route path={RouterPaths[2].path} element={<List></List>}></Route>
+        <Route path={RouterPaths[0].path} element={<Home></Home>}></Route>
+        <Route path={RouterPaths[1].path} element={<List></List>}></Route>
         <Route
           path={"/addictions/:addictionId"}
           element={<AddAddictionForm></AddAddictionForm>}
         ></Route>
-        <Route path={RouterPaths[3].path} element={<Profile></Profile>}></Route>
+        <Route path={RouterPaths[2].path} element={<Profile></Profile>}></Route>
         <Route
-          path={RouterPaths[4].path}
+          path={RouterPaths[3].path}
           element={<ListConditions></ListConditions>}
         ></Route>
         <Route

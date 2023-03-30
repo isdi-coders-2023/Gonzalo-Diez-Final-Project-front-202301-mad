@@ -8,7 +8,6 @@ export type RouterOption = {
 };
 
 export const RouterPaths: RouterOption[] = [
-  { label: "Access", path: "/access" },
   { label: "Home", path: "/home" },
   { label: "List", path: "/list" },
   { label: "Profile", path: "/Profile" },

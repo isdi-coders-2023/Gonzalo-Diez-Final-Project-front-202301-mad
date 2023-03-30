@@ -10,6 +10,7 @@ import {
 } from "../../reducer/users.slice";
 import { User } from "../../models/user";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export function UseUsers(repo: UserRepo) {
   const users = useSelector((state: RootState) => state.users);
@@ -19,7 +20,6 @@ export function UseUsers(repo: UserRepo) {
   const userRegister = async (userData: Partial<User>) => {
     try {
       const data = await repo.create(userData, "register");
-      console.log(data);
       dispatch(register(data.results[0]));
     } catch (error) {
       console.log((error as Error).message);

@@ -12,7 +12,6 @@ export function UseConditions(repo: ConditionsRepo) {
   const loadAllConditions = useCallback(async () => {
     try {
       const data = await repo.load();
-      console.log(data);
       dispatch(loadConditions(data.results));
     } catch (error) {
       console.log((error as Error).message);

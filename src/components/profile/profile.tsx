@@ -7,9 +7,9 @@ import { ListProfile } from "../listProfile/listProfile";
 export function Profile() {
   return (
     <>
+      <Header></Header>
       <div>
         <h2>Profile</h2>
-        <Header></Header>
         <ListProfile></ListProfile>
       </div>
     </>

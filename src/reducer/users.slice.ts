@@ -31,13 +31,14 @@ export const userSlice = createSlice({
       state.route = action.payload;
     },
     addAddiction: (state, action: PayloadAction<User>) => {
-      state.userLogged = action.payload;
+      state.userAddictions = action.payload;
     },
     loadUser(state, action: PayloadAction<User>) {
       state.userAddictions = action.payload;
+      state.userConditions = action.payload;
     },
     addCondition: (state, action: PayloadAction<User>) => {
-      state.userLogged = action.payload;
+      state.userConditions = action.payload;
     },
   },
 });

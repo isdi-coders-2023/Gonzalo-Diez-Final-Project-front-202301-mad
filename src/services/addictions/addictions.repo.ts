@@ -12,7 +12,6 @@ export class AddictionsRepo implements RepoAddiction<AddictionsServerResponse> {
 
     if (!resp.ok) throw new Error(`Error: ${resp.status} ${resp.statusText}`);
     const data = await resp.json();
-    console.log(data);
     return data;
   }
 }

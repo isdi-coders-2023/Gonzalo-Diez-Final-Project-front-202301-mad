@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { UseUsers } from "../../hooks/user/use.users";
 import { UserRepo } from "../../services/user/user.repo";
 import { useParams } from "react-router-dom";
@@ -8,11 +8,12 @@ import "./addAddictionForm.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { Header } from "../header/header";
+import Swal from "sweetalert2";
 
 const AddAddictionForm = () => {
   const token = useSelector((state: RootState) => state.users.userLogged);
-  // const repo = useMemo(() => new UserRepo(), []);
-  // const { users } = UseUsers(repo);
+  const repo = useMemo(() => new UserRepo(), []);
+  const { users } = UseUsers(repo);
   const { addictionId } = useParams<{ addictionId: any }>();
   const [timeConsuming, setTimeConsuming] = useState("");
   const [cause, setCause] = useState("");
@@ -30,6 +31,7 @@ const AddAddictionForm = () => {
       return console.error("Token was not found");
     }
     addUserAddiction(addictionId, new Date(timeConsuming), cause, token);
+    Swal.fire("Añadida!", "Su adicción ha sido añadida!", "success");
   };
 
   return (

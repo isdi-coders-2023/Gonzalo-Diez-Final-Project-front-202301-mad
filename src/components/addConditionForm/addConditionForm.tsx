@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { Header } from "../header/header";
 import { UseConditions } from "../../hooks/conditions/use.conditions";
+import Swal from "sweetalert2";
 
 const AddConditionForm = () => {
   const token = useSelector((state: RootState) => state.users.userLogged);
@@ -31,6 +32,7 @@ const AddConditionForm = () => {
     }
 
     addUserCondition(ConditionId, new Date(timeConsuming), cause, token);
+    Swal.fire("Añadida!", "Su adicción ha sido añadida!", "success");
   };
 
   return (

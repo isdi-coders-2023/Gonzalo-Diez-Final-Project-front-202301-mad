@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link } from "react-router-dom";
 import { RouterOption } from "../app/app";
 import "./menu.scss";
 
@@ -20,7 +21,7 @@ export function Menu({ menuOptions }: MenuProps) {
         <ul className="menu">
           {menuOptions.map((option) => (
             <li className="list" key={option.label}>
-              <a href={option.path}>{option.label}</a>
+              <Link to={option.path}>{option.label}</Link>
             </li>
           ))}
         </ul>

@@ -16,7 +16,7 @@ export function ListAddictions() {
     <>
       <Header></Header>
       <h2 className="title">Addictions</h2>
-      <div className="listContainer">
+      <div className="listContainerAddictions">
         <ul>
           {addictions.addictions.map((item: Addiction) => (
             <AddictionCard addiction={item} key={item.id}></AddictionCard>
