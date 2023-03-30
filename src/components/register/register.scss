@@ -1,0 +1,35 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  max-width: 300px; /* añade un ancho máximo */
+  margin: 0 auto; /* centra el formulario horizontalmente */
+}
+
+label {
+  margin-top: 5px; /* reduce el margen superior */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  padding: 5px;
+  margin-top: 3px; /* reduce el margen superior */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px; /* reduce el tamaño de la fuente */
+  outline: none;
+}
+
+button {
+  padding: 8px; /* reduce el espaciado interno */
+  margin-top: 20px;
+  border: none;
+  background-color: #2196f3;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 14px; /* reduce el tamaño de la fuente */
+  cursor: pointer;
+}

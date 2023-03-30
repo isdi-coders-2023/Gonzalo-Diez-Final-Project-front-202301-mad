@@ -1,14 +1,16 @@
-import { Causes } from "./causes";
-
 export type Condition = {
   id: string;
   name: string;
-  Causes: Causes | string;
+  img: string;
+  description: string;
+};
+
+export type ConditionsServerResponse = {
+  results: Condition[];
 };
 
 export type UserCondition = {
-  id: string;
-  addiction: Condition;
+  condition: string;
   timeConsuming: Date;
   cause: string;
 };

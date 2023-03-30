@@ -3,12 +3,16 @@ import { Causes } from "./causes";
 export type Addiction = {
   id: string;
   name: string;
-  causes: Causes;
+  img: string;
+  description: string;
+};
+
+export type AddictionsServerResponse = {
+  results: Addiction[];
 };
 
 export type UserAddiction = {
-  id: string;
-  addiction: Addiction;
+  addiction: string;
   timeConsuming: Date;
-  cause: string;
+  cause: Causes | string;
 };

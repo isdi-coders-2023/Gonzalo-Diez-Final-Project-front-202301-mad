@@ -1,0 +1,33 @@
+.homeContainer {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panels {
+  padding-top: 2rem;
+  display: flex;
+  flex: rows;
+  align-items: center;
+  img {
+    max-width: 8rem;
+  }
+}
+
+.statesContainer {
+  display: flex;
+  flex-direction: row;
+  img {
+    max-width: 3rem;
+  }
+  align-items: center;
+  .state4 {
+    max-width: 3.4rem;
+  }
+  .state5 {
+    margin-top: 6px;
+    max-width: 3.2rem;
+  }
+}
